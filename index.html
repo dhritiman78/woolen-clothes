@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            padding: 15px;
+            color: #fff;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar input[type="search"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 713px;
+            height: 36px;
+        }
+
+        .navbar button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .navbar img {
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+            filter: invert(100%);
+        }
+        #Carticon{
+            font-weight: bold;
+        }
+        .alterImg {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slideImg {
+            width: 100%;
+            height: 82vh;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #bbb;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .indicator.active {
+            background-color: #555;
+        }
+        .imgOfItems{
+            margin: 2px 2px;
+            width: 340px;
+            height: 320px;
+        }
+        .itemsContent{
+            display: flex;
+            flex-direction: column;
+            margin: 5px auto;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+        }
+        .itemsList{
+            display: flex;
+        }
+        .mainhead{
+            text-align: center;
+        }
+        .items{
+           margin: 20px 20px;
+        }
+        .itemsHeadText{
+            margin: 5px 57px;
+        }
+        .priceTag{
+            font-weight: bold;
+        }
+        .sizeTag{
+            color: #7b7b7b;
+        }
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+
+            .navbar input[type="search"] {
+                width: 100%;
+            }
+        }
+    </style>
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li style="font-size: 24px; font-weight: bold;">Kalakriti - KK</li>
+            <li><form class="example" action="action_page.php">
+                <input type="search" placeholder="Search by products name" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form></li>
+            <li><button type="button">Log in</button></li>
+            <li id="Carticon"><img src="assets/cartIcon.png" alt="">Cart</li>
+        </ul>
+    </div>
+    <div class="alterImg">
+        <img class="slideImg" src="assets/slideImg/pic10.jpg" alt="">
+        <div class="image-indicators"></div>
+    </div>
+    <div class="mainConatiner">
+        <div class="mainhead">
+            <h1>Our Products</h1>
+        </div>
+        <div class="sweaters items">
+            <div class="itemsHeadText">
+                <h2>Sweaters</h2>
+            </div>
+            <div class="itemsList">
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/sweaters/sweater1.1.png" alt="sweater1"></div>
+                <div>
+                    <p>Fashionable Handmade Wool Sweater for Her</p>
+                    <p class="priceTag">₹ 399</p>
+                    <p class="sizeTag">Size: M, L, XL, XXL</p>
+                </div>
+            </div>
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/sweaters/sweater2.1.png" alt="sweater1"></div>
+                <div>
+                    <p>Handcrafted Wool Blend Sweater for Men</p>
+                    <p class="priceTag">₹ 499</p>
+                    <p class="sizeTag">Size: L, XL, XXL</p>
+                </div>
+            </div>
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/sweaters/sweater3.1.png" alt="sweater1"></div>
+                <div>
+                    <p>Stylish Hand-Knit Women's Wool Sweater</p>
+                    <p class="priceTag">₹ 299</p>
+                    <p class="sizeTag">Size: L, XL, XXL</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="caps items">
+            <div class="itemsHeadText">
+                <h2>Woolen Caps</h2>
+            </div>
+            <div class="itemsList">
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/caps/cap1.1.jpg" alt="cap1"></div>
+                    <div>
+                        <p>Chic Winter Vibes Women's Woolen Cap</p>
+                        <p class="priceTag">₹ 171</p>
+                        <p class="sizeTag">Size: M, L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/caps/cap2.2.jpg" alt="cap2"></div>
+                    <div>
+                        <p>Colorful Handcrafted Woolen Cap</p>
+                        <p class="priceTag">₹ 189</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/caps/cap3.3.jpg" alt="cap3"></div>
+                    <div>
+                        <p>Stylish Men's Woolen Cap Collection</p>
+                        <p class="priceTag">₹ 169</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="mufflers items">
+            <div class="itemsHeadText">
+                <h2>Woolen Mufflers</h2>
+            </div>
+            <div class="itemsList">
+<div class="itemsContent">
+    <div class="itemImg"><img class="imgOfItems" src="assets/muffler/muffler1.1.webp" alt="muffler1"></div>
+    <div>
+        <p>Winter Wonderland Woolen Muffler</p>
+        <p class="priceTag">₹ 169</p>
+        <p class="sizeTag">Size: M, L, XL, XXL</p>
+    </div>
+</div>
+
+<div class="itemsContent">
+    <div class="itemImg"><img class="imgOfItems" src="assets/muffler/muffler2.1.jpg" alt="muffler2"></div>
+    <div>
+        <p>Cozy Comfort Multicolored Handmade Muffler</p>
+        <p class="priceTag">₹ 209</p>
+        <p class="sizeTag">Size: L, XL, XXL</p>
+    </div>
+</div>
+
+<div class="itemsContent">
+    <div class="itemImg"><img class="imgOfItems" src="assets/muffler/muffler3.1.webp" alt="muffler3"></div>
+    <div>
+        <p>Elegant Monochrome Wool Muffler</p>
+        <p class="priceTag">₹ 179</p>
+        <p class="sizeTag">Size: L, XL, XXL</p>
+    </div>
+</div>
+
+        </div>
+        </div>
+        <div class="socks items">
+            <div class="itemsHeadText">
+                <h2>Woolen Socks</h2>
+            </div>
+            <div class="itemsList">
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/socks/sock1.1.jpg" alt="socks1"></div>
+                    <div>
+                        <p>Cozy Comfort Woolen Socks for All</p>
+                        <p class="priceTag">₹ 129</p>
+                        <p class="sizeTag">Size: M, L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/socks/sock2.1.jpg" alt="socks2"></div>
+                    <div>
+                        <p>Vibrant Handmade Woolen Socks</p>
+                        <p class="priceTag">₹ 159</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/socks/sock3.1.jpg" alt="socks3"></div>
+                    <div>
+                        <p>Color Splash Woolen Socks Collection</p>
+                        <p class="priceTag">₹ 147</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+        </div>
+        </div>
+        <div class="socks items">
+            <div class="itemsHeadText">
+                <h2>Baby Woolen Sets (for 6 months)</h2>
+            </div>
+        <div class="itemsList">
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/babysets/babyset1.1.jpg" alt="babyset1"></div>
+                <div>
+                    <p>Adorable Baby Woolen Sets for Little Ones</p>
+                    <p class="priceTag">₹ 699</p>
+                    <p class="sizeTag">Size: M, L, XL, XXL</p>
+                </div>
+            </div>
+            
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/babysets/babyset2.1.jpg" alt="babyset2"></div>
+                <div>
+                    <p>Cute and Cozy Woolen Sets for Infants</p>
+                    <p class="priceTag">₹ 599</p>
+                    <p class="sizeTag">Size: L, XL, XXL</p>
+                </div>
+            </div>
+            
+            <div class="itemsContent">
+                <div class="itemImg"><img class="imgOfItems" src="assets/babysets/babyset3.1.jpeg" alt="babyset3"></div>
+                <div>
+                    <p>Warmth and Style for Baby's First Winter</p>
+                    <p class="priceTag">₹ 559</p>
+                    <p class="sizeTag">Size: L, XL, XXL</p>
+                </div>
+            </div>            
+        </div>
+        </div>
+        <div class="idolDress items">
+            <div class="itemsHeadText">
+                <h2>Woolen idol dresses</h2>
+            </div>
+            <div class="itemsList">
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/idolDress/idolDress1.1.png" alt="idolset1"></div>
+                    <div>
+                        <p>Ethereal Woolen Idol Dress Collection</p>
+                        <p class="priceTag">₹ 299</p>
+                        <p class="sizeTag">Size: M, L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/idolDress/idolDress2.1.jpg" alt="idolset2"></div>
+                    <div>
+                        <p>Divine Woolen Attire for Spiritual Moments</p>
+                        <p class="priceTag">₹ 279</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+                
+                <div class="itemsContent">
+                    <div class="itemImg"><img class="imgOfItems" src="assets/idolDress/idolDress3.1.jpg" alt="idolset3"></div>
+                    <div>
+                        <p>Sacred Woolen Garments for Special Occasions</p>
+                        <p class="priceTag">₹ 249</p>
+                        <p class="sizeTag">Size: L, XL, XXL</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script>
+        let slideImg = document.querySelector(".slideImg");
+        let indicatorsContainer = document.querySelector(".image-indicators");
+        let srcs = ["assets/slideImg/pic1.jpg",
+        "assets/slideImg/pic2.jpg",
+        "assets/slideImg/pic3.jpeg",
+        "assets/slideImg/pic4.jpeg",
+        "assets/slideImg/pic5.jpeg",
+        "assets/slideImg/pic6.jpeg",
+        "assets/slideImg/pic7.jpeg",
+        "assets/slideImg/pic8.jpeg",
+        "assets/slideImg/pic9.jpeg",
+        "assets/slideImg/pic10.jpg",
+    ];
+        let currentIndex = 0;
+
+        function updateSlide() {
+            slideImg.src = srcs[currentIndex];
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            let indicatorsHTML = "";
+            for (let i = 0; i < srcs.length; i++) {
+                indicatorsHTML += `<div class="indicator ${i === currentIndex ? 'active' : ''}" onclick="changeSlide(${i})"></div>`;
+            }
+            indicatorsContainer.innerHTML = indicatorsHTML;
+        }
+
+        function changeSlide(index) {
+            currentIndex = index;
+            updateSlide();
+            resetTimer();
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            startTimer();
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                currentIndex = (currentIndex + 1) % srcs.length;
+                updateSlide();
+            }, 5000);
+        }
+
+        startTimer();
+    </script>
+</body>
+</html>
