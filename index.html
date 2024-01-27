@@ -34,7 +34,7 @@
             padding: 10px;
             border: none;
             border-radius: 5px;
-            width: 713px;
+            width: 660px;
             height: 36px;
         }
 
@@ -47,7 +47,7 @@
             cursor: pointer;
             font-weight: bold;
         }
-        .navbar img {
+        #Carticon img {
             width: 25px;
             height: 25px;
             margin-right: 5px;
@@ -63,7 +63,7 @@
 
         .slideImg {
             width: 100%;
-            height: 82vh;
+            height: 81.5vh;
             transition: transform 0.5s ease-in-out;
         }
 
@@ -121,6 +121,11 @@
         .sizeTag{
             color: #7b7b7b;
         }
+        .logo{
+            height: 40px;
+            width: 224px;
+            filter: invert();
+        }
         @media (max-width: 768px) {
             .navbar ul {
                 flex-direction: column;
@@ -141,7 +146,7 @@
 <body>
     <div class="navbar">
         <ul>
-            <li style="font-size: 24px; font-weight: bold;">Kalakriti - KK</li>
+            <li style="font-size: 24px; font-weight: bold;   "><img class="logo" src="assets/logo.png" alt=""></li>
             <li><form class="example" action="action_page.php">
                 <input type="search" placeholder="Search by products name" name="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
@@ -151,7 +156,7 @@
         </ul>
     </div>
     <div class="alterImg">
-        <img class="slideImg" src="assets/slideImg/pic10.jpg" alt="">
+        <img class="slideImg" src="assets/slideImg/pic1.2.JPG" alt="">
         <div class="image-indicators"></div>
     </div>
     <div class="mainConatiner">
@@ -359,16 +364,8 @@
     <script>
         let slideImg = document.querySelector(".slideImg");
         let indicatorsContainer = document.querySelector(".image-indicators");
-        let srcs = ["assets/slideImg/pic1.jpg",
-        "assets/slideImg/pic2.jpg",
-        "assets/slideImg/pic3.jpeg",
-        "assets/slideImg/pic4.jpeg",
-        "assets/slideImg/pic5.jpeg",
-        "assets/slideImg/pic6.jpeg",
-        "assets/slideImg/pic7.jpeg",
-        "assets/slideImg/pic8.jpeg",
-        "assets/slideImg/pic9.jpeg",
-        "assets/slideImg/pic10.jpg",
+        let srcs = ["assets/slideImg/pic1.2.jpg",
+        "assets/slideImg/pic2.1.jpg", "assets/slideImg/pic3.1.jpg", "assets/slideImg/pic4.1.jpg"
     ];
         let currentIndex = 0;
 
